@@ -1,0 +1,49 @@
+fields:
+- name: _id
+  type: STRING
+  mode: NULLABLE
+  description: 'Unique identifier'
+  source: _id
+  rule:
+  - rule_name: not_null
+    desc: 'The _id field should not have NULL value'
+    logic:
+    - _id IS NULL
+- name: role
+  type: STRING
+  mode: NULLABLE
+  description: ''
+  source: role
+  rule:
+  - rule_name: not_null
+    desc: 'The field should not have NULL value'
+    logic:
+    - role IS NULL
+- name: is_suspended
+  type: BOOLEAN
+  mode: NULLABLE
+  description: ''
+  source: isSuspended
+  rule:
+  - rule_name: not_null
+    desc: 'The field should not have NULL value'
+    logic:
+    - is_suspended IS NULL
+- name: created_at
+  type: TIMESTAMP
+  mode: NULLABLE
+  description: 'Creation time'
+  source: createdAt
+  rule:
+  - rule_name: not_null
+    desc: 'The field should not have NULL value'
+    logic:
+    - created_at IS NULL
+      
+
+
+
+
+
+
+         
